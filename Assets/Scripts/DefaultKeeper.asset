@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d23d7948530f1854baaebe66fde27b85, type: 3}
+  m_Name: DefaultKeeper
+  m_EditorClassIdentifier: 
+  deleteKeeper: 1
+  layer: 1
+  currency: 567
+  initial: 0
+  secondary: 0
+  musicInit: 1
+  soundsInit: 1
+  schooling: 1
