@@ -5,13 +5,13 @@ public class SafeKeeper : MonoBehaviour
 	[SerializeField] private DefaultKeeper defaultKeeper;
 	public static SafeKeeper Entry { get; private set; }
 
-	public int layer;
-	public int currency;
-	public int initial;
-	public int secondary;
-	public int musicInit;
-	public int soundsInit;
-	public int schooling;
+	[HideInInspector] public int layer;
+	[HideInInspector] public int currency;
+	[HideInInspector] public int initial;
+	[HideInInspector] public int secondary;
+	[HideInInspector] public int musicInit;
+	[HideInInspector] public int soundsInit;
+	[HideInInspector] public int schooling;
 
 	private void Awake()
 	{

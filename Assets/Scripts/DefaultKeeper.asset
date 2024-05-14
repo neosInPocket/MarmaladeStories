@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deleteKeeper: 1
   layer: 1
-  currency: 567
+  currency: 30
   initial: 0
   secondary: 0
   musicInit: 1
