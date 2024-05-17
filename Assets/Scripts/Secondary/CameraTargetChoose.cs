@@ -5,6 +5,7 @@ public class CameraTargetChoose : MonoBehaviour
 {
 	[SerializeField] public Transform firstTarget;
 	[SerializeField] public Transform secondTarget;
+	[SerializeField] public float topOffsetValue;
 	[Range(0, 1f)]
 	[SerializeField]
 	private float cameraTopBottomOffsets;
@@ -12,6 +13,7 @@ public class CameraTargetChoose : MonoBehaviour
 	private Vector3 camPosition;
 	[HideInInspector] public Vector2 cameraSize;
 	private float offset;
+	private float topOffset;
 	public Action TargetOverflow { get; set; }
 	private bool disabled;
 
@@ -24,6 +26,7 @@ public class CameraTargetChoose : MonoBehaviour
 		camPosition.z = -10;
 		camPosition.y = firstTarget.position.y + cameraSize.y - offset;
 		transform.position = camPosition;
+		topOffset = 2 * cameraSize.y * topOffsetValue;
 	}
 
 	private void Update()
@@ -50,7 +53,7 @@ public class CameraTargetChoose : MonoBehaviour
 		if (disabled) return;
 		Transform otherTarget = currentTarget == firstTarget ? secondTarget : firstTarget;
 
-		if (Mathf.Abs(firstTarget.transform.position.y - secondTarget.transform.position.y) > 2 * cameraSize.y - offset + currentTarget.localScale.x / 2)
+		if (Mathf.Abs(firstTarget.transform.position.y - secondTarget.transform.position.y) > 2 * cameraSize.y - offset + currentTarget.localScale.x / 2 - topOffset)
 		{
 			disabled = true;
 			TargetOverflow?.Invoke();

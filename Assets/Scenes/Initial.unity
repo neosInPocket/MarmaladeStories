@@ -2555,7 +2555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'WISE CONNECTOR '
+  m_text: DRONE FUEL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 211eb233debc4234a80fd523752ad723, type: 2}
   m_sharedMaterial: {fileID: 458800302515182368, guid: 211eb233debc4234a80fd523752ad723, type: 2}
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.5
+  m_fontSize: 54.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3750,7 +3750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: t is a long established fact that a reader will be distracted
+  m_text: INCREASES THE RATE OF DRONE SIZE CHANGE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 211eb233debc4234a80fd523752ad723, type: 2}
   m_sharedMaterial: {fileID: 458800302515182368, guid: 211eb233debc4234a80fd523752ad723, type: 2}
@@ -3777,7 +3777,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.25
+  m_fontSize: 49.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4378,7 +4378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'WISE CONNECTOR '
+  m_text: HAMMER OF SPEED
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 211eb233debc4234a80fd523752ad723, type: 2}
   m_sharedMaterial: {fileID: 458800302515182368, guid: 211eb233debc4234a80fd523752ad723, type: 2}
@@ -4405,7 +4405,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.5
+  m_fontSize: 44.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6509,7 +6509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: t is a long established fact that a reader will be distracted
+  m_text: REDUCES DRONE FLIGHT SPEED RANGE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 211eb233debc4234a80fd523752ad723, type: 2}
   m_sharedMaterial: {fileID: 458800302515182368, guid: 211eb233debc4234a80fd523752ad723, type: 2}
@@ -6536,7 +6536,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.25
+  m_fontSize: 55.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

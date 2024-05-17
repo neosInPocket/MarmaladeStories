@@ -4,5 +4,7 @@ using UnityEngine;
 public class DefaultUpgradeValues : ScriptableObject
 {
 	[SerializeField] private float[] _upgradesForSpeed;
-	public float ScaleSpeedUpgrade => _upgradesForSpeed[SafeKeeper.Entry.initial];
+	[SerializeField] private Vector2[] _upgradesForVerticalSpeed;
+	public float ScaleSpeedUpgrade => _upgradesForSpeed[SafeKeeper.Entry.secondary];
+	public Vector2 VerticalSpeedUpgrade => _upgradesForVerticalSpeed[SafeKeeper.Entry.initial];
 }

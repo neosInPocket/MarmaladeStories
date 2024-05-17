@@ -2,17 +2,19 @@ using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using TouchInput = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using FingerInput = UnityEngine.InputSystem.EnhancedTouch.Finger;
+using Action = System.Action;
 
 public class ScaleBall : MonoBehaviour
 {
 	[SerializeField] public SpriteRenderer scaleRenderer;
 	[SerializeField] public Rigidbody2D scaleBallRigid;
 	[SerializeField] public Vector2 minMaxScale;
-	[SerializeField] public Vector2 minMaxSpeed;
 	[SerializeField] public DefaultUpgradeValues defaultUpgradeValues;
 	[SerializeField] public bool isRightBall;
 	[SerializeField] public CameraTargetChoose cameraTargetChoose;
 	[SerializeField] private Vector2 rotateAmplitues;
+	[SerializeField] private GameObject scaleBallBlow;
+	private Vector2 minMaxSpeed;
 	private float rotateAmplitude;
 	private int rotateDir;
 	private Vector3 rotValue;
@@ -45,17 +47,20 @@ public class ScaleBall : MonoBehaviour
 	private bool isScaleChangeActive;
 	private int currentScaleDirection;
 	private FingerInput currentFinger;
+	public Action BallFitAction { get; set; }
+	public Action UnFitAction { get; set; }
 
 	private void Awake()
 	{
 		EnhancedTouchSupport.Enable();
 		TouchSimulation.Enable();
 	}
-
-	private void Start()
+	public void Initialize()
 	{
+		minMaxSpeed = defaultUpgradeValues.VerticalSpeedUpgrade;
+
 		Scale = (minMaxScale.x + minMaxScale.y) / 2;
-		Speed = (minMaxSpeed.x + minMaxSpeed.y) / 2;
+
 		currentScaleDirection = 1;
 		scaleSpeed = defaultUpgradeValues.ScaleSpeedUpgrade;
 		rotateDir = Random.Range(0, 2) == 0 ? -1 : 1;
@@ -97,17 +102,21 @@ public class ScaleBall : MonoBehaviour
 	{
 		TouchInput.onFingerDown += OnScaleChangeStart;
 		TouchInput.onFingerUp += OnScaleChangeEnd;
+		Speed = (minMaxSpeed.x + minMaxSpeed.y) / 2;
 	}
 
 	public void DeactivateBall()
 	{
 		TouchInput.onFingerDown -= OnScaleChangeStart;
 		TouchInput.onFingerUp -= OnScaleChangeEnd;
+		scaleBallRigid.velocity = Vector3.zero;
+		scaleBallRigid.constraints = RigidbodyConstraints2D.FreezeAll;
 	}
 
 	public void BlowScaleBall()
 	{
-		scaleBallRigid.velocity = Vector3.zero;
+		scaleBallBlow.SetActive(true);
+		DeactivateBall();
 	}
 
 	private void MapSpeedValue()
@@ -144,6 +153,33 @@ public class ScaleBall : MonoBehaviour
 		{
 			return false;
 		}
+	}
+
+	private bool triggerEnter;
+
+	private void OnTriggerStay2D(Collider2D collider)
+	{
+		if (transform.position.y < collider.transform.position.y || triggerEnter) return;
+
+		if (collider.TryGetComponent<ScaleOrb>(out ScaleOrb orb))
+		{
+			triggerEnter = true;
+			if (orb.CheckScaleBallFit(transform))
+			{
+				BallFitAction?.Invoke();
+				Debug.Log("fit" + gameObject.name);
+			}
+			else
+			{
+				UnFitAction?.Invoke();
+				Debug.Log("unfit" + gameObject.name);
+			}
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collider)
+	{
+		triggerEnter = false;
 	}
 
 	private void OnDestroy()
