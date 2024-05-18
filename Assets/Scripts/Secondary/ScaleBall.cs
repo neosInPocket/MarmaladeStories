@@ -100,6 +100,7 @@ public class ScaleBall : MonoBehaviour
 
 	public void ActivateBall()
 	{
+
 		TouchInput.onFingerDown += OnScaleChangeStart;
 		TouchInput.onFingerUp += OnScaleChangeEnd;
 		Speed = (minMaxSpeed.x + minMaxSpeed.y) / 2;
@@ -111,12 +112,15 @@ public class ScaleBall : MonoBehaviour
 		TouchInput.onFingerUp -= OnScaleChangeEnd;
 		scaleBallRigid.velocity = Vector3.zero;
 		scaleBallRigid.constraints = RigidbodyConstraints2D.FreezeAll;
+		isScaleChangeActive = false;
 	}
 
 	public void BlowScaleBall()
 	{
 		scaleBallBlow.SetActive(true);
 		DeactivateBall();
+		isScaleChangeActive = false;
+		scaleRenderer.enabled = false;
 	}
 
 	private void MapSpeedValue()
@@ -130,6 +134,7 @@ public class ScaleBall : MonoBehaviour
 
 		if ((isRightBall && isRightSided) || (!isRightBall && !isRightSided))
 		{
+			currentScaleDirection *= -1;
 			isScaleChangeActive = true;
 			currentFinger = input;
 		}
@@ -159,6 +164,11 @@ public class ScaleBall : MonoBehaviour
 
 	private void OnTriggerStay2D(Collider2D collider)
 	{
+		if (collider.TryGetComponent<FlameController>(out FlameController component))
+		{
+			UnFitAction?.Invoke();
+		}
+
 		if (transform.position.y < collider.transform.position.y || triggerEnter) return;
 
 		if (collider.TryGetComponent<ScaleOrb>(out ScaleOrb orb))
@@ -167,13 +177,13 @@ public class ScaleBall : MonoBehaviour
 			if (orb.CheckScaleBallFit(transform))
 			{
 				BallFitAction?.Invoke();
-				Debug.Log("fit" + gameObject.name);
 			}
 			else
 			{
 				UnFitAction?.Invoke();
-				Debug.Log("unfit" + gameObject.name);
 			}
+
+			return;
 		}
 	}
 
