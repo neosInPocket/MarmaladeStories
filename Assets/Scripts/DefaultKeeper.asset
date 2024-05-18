@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23d7948530f1854baaebe66fde27b85, type: 3}
   m_Name: DefaultKeeper
   m_EditorClassIdentifier: 
-  deleteKeeper: 1
+  deleteKeeper: 0
   layer: 1
   currency: 0
   initial: 0
