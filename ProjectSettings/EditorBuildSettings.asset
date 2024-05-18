@@ -11,5 +11,53 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Secondary.unity
     guid: e7fdece62ac30724abbc94245029405d
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject.unity
+    guid: dc60c40b0ccdc0249b6452dd2a86a629
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 1.unity
+    guid: b971d8f9a6f5cbf45a4ed6438e27c935
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 2.unity
+    guid: b732fa27982290c4b81277ad1d17d29b
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 3.unity
+    guid: 99070eb9bc738774999506381f0019f8
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 4.unity
+    guid: b3b6b4e6859601f4dad0745ffa129c59
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 5.unity
+    guid: b0244ae8eeb8a954ab0d1fa4afa3eec5
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 6.unity
+    guid: 2a74803021a767945b6db6ab28147f1a
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 7.unity
+    guid: 92f011a308c9f944984e630a43644d7b
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 8.unity
+    guid: 5c090e96d384de442ae9fddb1c3d0bda
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 9.unity
+    guid: df4456763e7c6e0439b1c0dbc8cff1ef
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 10.unity
+    guid: 4287350c5a9fdb74a8fa45d4095e4662
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 11.unity
+    guid: 8e6da43d99aa7fc4eba4adc729b8111e
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 12.unity
+    guid: 7b109386af75ca74994636c4321ee82e
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 13.unity
+    guid: 906ffa539cad46b4fb193f110696eac1
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 14.unity
+    guid: 85cc051cda3a7b849a3dbc3f7bf71423
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpaceObject 15.unity
+    guid: 46f71d3f6a765134095828985815bcaf
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 7bc01747a161f2d4ab56392bc4d7878b, type: 2}

@@ -19,7 +19,7 @@ public class PreviewExplorer : MonoBehaviour
 	{
 		gameObject.SetActive(true);
 		Touch.onFingerDown += Commander;
-		characterSpeech.text = "WELCOME TO A SPACE ADVENTURE CALLED [GAME NAME]";
+		characterSpeech.text = "WELCOME TO A SPACE ADVENTURE CALLED SPACE FLYING BALLS";
 	}
 
 	private void Commander(Finger finger)
@@ -84,7 +84,11 @@ public class PreviewExplorer : MonoBehaviour
 
 	public void PreviewExploredAction(Finger finger)
 	{
-		PreviewExplored();
+		if (PreviewExplored != null)
+		{
+			PreviewExplored();
+		}
+
 		gameObject.SetActive(false);
 
 		Touch.onFingerDown -= Commander;

@@ -234,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13641547, y: 0.30845293}
   m_AnchorMax: {x: 0.841, y: 0.40500003}
-  m_AnchoredPosition: {x: 0.049926758, y: 0}
+  m_AnchoredPosition: {x: 0.050048828, y: 0}
   m_SizeDelta: {x: 0.099998474, y: 0.0000019073486}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &56364950
@@ -2078,7 +2078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05910833, y: 0.29034594}
   m_AnchorMax: {x: 0.48472184, y: 0.7073069}
-  m_AnchoredPosition: {x: 26, y: 0}
+  m_AnchoredPosition: {x: 25.999817, y: 0}
   m_SizeDelta: {x: -33.089, y: -23.931}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &676528481
@@ -2666,7 +2666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05910833, y: 0.29034594}
   m_AnchorMax: {x: 0.48472184, y: 0.7073069}
-  m_AnchoredPosition: {x: 26, y: 0}
+  m_AnchoredPosition: {x: 25.999817, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &809953460
@@ -6011,7 +6011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11013348, y: 0.224}
   m_AnchorMax: {x: 0.8898665, y: 0.8665346}
-  m_AnchoredPosition: {x: 4.8999634, y: -4.900009}
+  m_AnchoredPosition: {x: 4.8999634, y: -4.9000244}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1705579769
@@ -6643,7 +6643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLINKO AMUSEMENT
+  m_text: Space Flying Balls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 211eb233debc4234a80fd523752ad723, type: 2}
   m_sharedMaterial: {fileID: 458800302515182368, guid: 211eb233debc4234a80fd523752ad723, type: 2}
@@ -6675,8 +6675,8 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 134.7
-  m_fontStyle: 0
+  m_fontSizeMax: 135.81
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
