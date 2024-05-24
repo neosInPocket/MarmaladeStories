@@ -5,6 +5,7 @@ public class ScaleOrbSpawner : MonoBehaviour
 	[SerializeField] private ScaleOrb scaleOrbPref;
 	[SerializeField] private FlameController flamePref;
 	[SerializeField] private Vector2 appearDistances;
+	[SerializeField] private Vector2 flameAppearDistances;
 	[SerializeField] private CameraTargetChoose cam;
 	[SerializeField] private Transform leftTarget;
 	[SerializeField] private Transform rightTarget;
@@ -36,7 +37,6 @@ public class ScaleOrbSpawner : MonoBehaviour
 		CheckLeft();
 		CheckRight();
 		CheckLeftFlame();
-		CheckRightFlame();
 	}
 
 	public void CheckLeftFlame()
@@ -45,27 +45,24 @@ public class ScaleOrbSpawner : MonoBehaviour
 		{
 			Vector2 orbPosition;
 			orbPosition.x = currentLeftFlame.transform.position.x;
-			var difference = Random.Range(appearDistances.x, appearDistances.y);
+			var difference = Random.Range(flameAppearDistances.x, flameAppearDistances.y);
 			orbPosition.y = currentLeftFlame.transform.position.y + difference;
 			var left = Instantiate(flamePref, orbPosition, Quaternion.identity, transform);
 
 			currentLeftFlame = left;
+			CheckRightFlame(difference);
 		}
 	}
 
-	public void CheckRightFlame()
+	public void CheckRightFlame(float ySpawnPosition)
 	{
-		if (rightTarget.transform.position.y + 2 * cam.cameraSize.y > currentRightFlame.transform.position.y)
-		{
-			Vector2 orbPosition;
-			orbPosition.x = currentRightFlame.transform.position.x;
-			var difference = Random.Range(appearDistances.x, appearDistances.y);
-			orbPosition.y = currentRightFlame.transform.position.y + difference;
-			var right = Instantiate(flamePref, orbPosition, Quaternion.identity, transform);
-			right.transform.eulerAngles = new Vector3(0, 180, 0);
+		Vector2 orbPosition;
+		orbPosition.x = currentRightFlame.transform.position.x;
+		orbPosition.y = currentRightFlame.transform.position.y + ySpawnPosition;
+		var right = Instantiate(flamePref, orbPosition, Quaternion.identity, transform);
+		right.transform.eulerAngles = new Vector3(0, 180, 0);
 
-			currentRightFlame = right;
-		}
+		currentRightFlame = right;
 	}
 
 	public void CheckRight()

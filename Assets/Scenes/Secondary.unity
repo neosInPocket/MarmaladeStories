@@ -932,6 +932,7 @@ MonoBehaviour:
   scaleOrbPref: {fileID: 8914884341131841783, guid: 5629eb8af18f9564492be5991ba43231, type: 3}
   flamePref: {fileID: 1882373092560486786, guid: 7f18e8531c1bc3d42bfff99ba782eeb7, type: 3}
   appearDistances: {x: 5, y: 10}
+  flameAppearDistances: {x: 10, y: 15}
   cam: {fileID: 519420033}
   leftTarget: {fileID: 374229555}
   rightTarget: {fileID: 738065783}
@@ -1023,7 +1024,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 87.2
+  m_fontSize: 71.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1950,7 +1951,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 92.79
+  m_fontSize: 83.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

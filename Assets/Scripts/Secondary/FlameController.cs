@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class FlameController : MonoBehaviour
 {
-	[SerializeField] private ParticleSystem mainParticle;
-	[SerializeField] private BoxCollider2D colliderBox;
-	[SerializeField] private float stopEmitSpeed;
-	[SerializeField] private float startEmitSpeed;
-	[SerializeField] private float pulse;
+	[SerializeField] public ParticleSystem mainParticle;
+	[SerializeField] public BoxCollider2D colliderBox;
+	[SerializeField] public float stopEmitSpeed;
+	[SerializeField] public float startEmitSpeed;
+	[SerializeField] public float pulse;
+	[SerializeField] public float inactivePulseTime;
 
 	private void Start()
 	{
@@ -30,10 +31,12 @@ public class FlameController : MonoBehaviour
 
 	public IEnumerator PulseDelay()
 	{
-		DisableFlame();
-		yield return new WaitForSeconds(pulse);
 		EnableFlame();
 		yield return new WaitForSeconds(pulse);
+
+		DisableFlame();
+		yield return new WaitForSeconds(inactivePulseTime);
+
 		StartCoroutine(PulseDelay());
 	}
 }

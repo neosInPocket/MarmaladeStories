@@ -52,7 +52,7 @@ MonoBehaviour:
   fit: {fileID: 1130542450727865150}
   unFit: {fileID: 6037569161095274564}
   neutral: {fileID: 8148106914736949259}
-  fitError: 0.3
+  fitError: 0.4
   minMaxScale: {x: 0.5, y: 2}
   fitBlow: {fileID: 7420196179707050716}
 --- !u!58 &4911097564250234675

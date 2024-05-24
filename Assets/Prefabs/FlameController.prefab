@@ -9665,7 +9665,8 @@ MonoBehaviour:
   colliderBox: {fileID: 5921736188368422903}
   stopEmitSpeed: 1
   startEmitSpeed: 4
-  pulse: 4
+  pulse: 2
+  inactivePulseTime: 4
 --- !u!1 &1764258659051392727
 GameObject:
   m_ObjectHideFlags: 0
